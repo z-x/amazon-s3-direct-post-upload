@@ -20,7 +20,7 @@ $year = date(Y) + 10;
 
 $policy = '{ "expiration": "'.$year.'-12-01T12:00:00.000Z",
 	"conditions": [
-		{"bucket": "tylkoteatr"},
+		{"bucket": "'.$bucket.'"},
 		["starts-with", "$key", "'.str_replace('${filename}', '', $key).'"],
 		{"acl": "'.$acl.'"},
 		{"success_action_redirect": "'.$success_action_redirect.'"},
